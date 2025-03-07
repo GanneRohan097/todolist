@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List</h1>
+      <div class="input-container">
+        <input type="text" id="taskInput" placeholder="Enter task..." />
+       
+
+        <button id="addButton" onclick="add()">Add</button>
+      </div>
+
+      <div class="todo-list" id="todoList">
+        <h3>Tasks</h3>
+        <div id="highPriorityContainer">
+       
+        
+        
+        </div>
+        
+      </div>
+    </div>
+    <script>
+            function add(){
+                let x=document.getElementById('taskInput').value;
+                let new1=document.createElement("div");
+                let checkb=document.createElement("input");
+                checkb.type="checkbox";
+                let l=document.createElement("label");
+                l.innerText=x;
+                new1.appendChild(checkb);
+                new1.appendChild(l);
+                document.getElementById('highPriorityContainer').appendChild(new1);
+                document.getElementById('taskInput').value="";
+            }
+    </script>
+  </body>
+</html>
